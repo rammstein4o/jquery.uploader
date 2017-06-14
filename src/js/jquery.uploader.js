@@ -493,15 +493,15 @@
                                 switch (obj.type[0]) {
                                     case "image":
                                         m[0] = "f-image";
-                                        m[1] = "<i class=\"icon-jfi-file-image\"></i>"
+                                        m[1] = "<i class=\"fa fa-file-image-o\"></i>"
                                         break;
                                     case "video":
                                         m[0] = "f-video";
-                                        m[1] = "<i class=\"icon-jfi-file-video\"></i>"
+                                        m[1] = "<i class=\"fa fa-file-video-o\"></i>"
                                         break;
                                     case "audio":
                                         m[0] = "f-audio";
-                                        m[1] = "<i class=\"icon-jfi-file-audio\"></i>"
+                                        m[1] = "<i class=\"fa fa-file-audio-o\"></i>"
                                         break;
                                     default:
                                         m[0] = "f-file f-file-ext-" + obj.extension;
@@ -977,9 +977,9 @@
                         getIcon: function(ext, type) {
                             var types = ["audio", "image", "text", "video"];
                             if ($.inArray(type, types) > -1) {
-                                return '<i class="icon-jfi-file-' + type + ' jfi-file-ext-' + ext + '"></i>';
+                                return '<i class="fa fa-file-' + type + '-o"></i>';
                             }
-                            return '<i class="icon-jfi-file-o jfi-file-type-' + type + ' jfi-file-ext-' + ext + '"></i>';
+                            return '<i class="fa fa-file fa-file-' + type + '-o fa-file-' + ext + '-o"></i>';
                         },
                         textParse: function(text, opts) {
                             opts = $.extend({}, {
@@ -1061,8 +1061,8 @@
         theme: 'default',
         templates: {
             box: '<ul class="uploader-items-list uploader-items-default"></ul>',
-            item: '<li class="uploader-item"><div class="uploader-item-container"><div class="uploader-item-inner"><div class="uploader-item-icon pull-left">{{fi-icon}}</div><div class="uploader-item-info pull-left"><div class="uploader-item-title" title="{{fi-name}}">{{fi-name | limitTo:30}}</div><div class="uploader-item-others"><span>size: {{fi-size2}}</span><span>type: {{fi-extension}}</span><span class="uploader-item-status">{{fi-progressBar}}</span></div><div class="uploader-item-assets"><ul class="list-inline"><li><a class="icon-jfi-trash uploader-item-trash-action"></a></li></ul></div></div></div></div></li>',
-            itemAppend: '<li class="uploader-item"><div class="uploader-item-container"><div class="uploader-item-inner"><div class="uploader-item-icon pull-left">{{fi-icon}}</div><div class="uploader-item-info pull-left"><div class="uploader-item-title">{{fi-name | limitTo:35}}</div><div class="uploader-item-others"><span>size: {{fi-size2}}</span><span>type: {{fi-extension}}</span><span class="uploader-item-status"></span></div><div class="uploader-item-assets"><ul class="list-inline"><li><a class="icon-jfi-trash uploader-item-trash-action"></a></li></ul></div></div></div></div></li>',
+            item: '<li class="uploader-item"><div class="uploader-item-container"><div class="uploader-item-inner"><div class="uploader-item-icon pull-left">{{fi-icon}}</div><div class="uploader-item-info pull-left"><div class="uploader-item-title" title="{{fi-name}}">{{fi-name | limitTo:30}}</div><div class="uploader-item-others"><span>size: {{fi-size2}}</span><span>type: {{fi-extension}}</span><span class="uploader-item-status">{{fi-progressBar}}</span></div><div class="uploader-item-assets"><ul class="list-inline"><li><a class="fa fa-trash-o uploader-item-trash-action"></a></li></ul></div></div></div></div></li>',
+            itemAppend: '<li class="uploader-item"><div class="uploader-item-container"><div class="uploader-item-inner"><div class="uploader-item-icon pull-left">{{fi-icon}}</div><div class="uploader-item-info pull-left"><div class="uploader-item-title">{{fi-name | limitTo:35}}</div><div class="uploader-item-others"><span>size: {{fi-size2}}</span><span>type: {{fi-extension}}</span><span class="uploader-item-status"></span></div><div class="uploader-item-assets"><ul class="list-inline"><li><a class="fa fa-trash-o uploader-item-trash-action"></a></li></ul></div></div></div></div></li>',
             progressBar: '<div class="bar"></div>',
             itemAppendToEnd: false,
             removeConfirmation: true,
