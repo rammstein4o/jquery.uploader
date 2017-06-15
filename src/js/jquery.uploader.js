@@ -583,6 +583,7 @@
                                 data: formData,
                                 type: n.uploadFile.type,
                                 enctype: n.uploadFile.enctype,
+                                headers: n.uploadFile.headers || {},
                                 xhr: function() {
                                     var myXhr = $.ajaxSettings.xhr();
                                     if (myXhr.upload) {
