@@ -40,7 +40,7 @@ Make sure you also load the jQuery library. Example:
 
 **Stylesheets:**
 
-Include the jQuery.filer stylesheets into head.
+Include the jquery.uploader stylesheets into head.
 
 ```html
 <link href="./css/jquery.uploader.css" type="text/css" rel="stylesheet" />
@@ -52,7 +52,7 @@ Include the jQuery library and jquery.uploader script file in your html page.
 
 ```html
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="./js/jquery.filer.min.js"></script>
+<script src="./js/jquery.uploader.min.js"></script>
 ```
 
 **HTML:**
@@ -61,7 +61,7 @@ Create a simple form with an input file element.
 
 ```html
 <form action="./php/upload.php" method="post" enctype="multipart/form-data">
-      <input type="file" name="files[]" id="filer_input" multiple="multiple">
+      <input type="file" name="files[]" multiple="multiple">
       <input type="submit" value="Submit">
 </form>
 ```
@@ -72,7 +72,7 @@ The plugin is named "uploader" and can be applied to any element. If you are not
 
 ```bash
 $(document).ready(function() {
-     $('#filer_input').uploader();       
+     $(':input[type="file"]').uploader();       
 });
 ```
 
@@ -81,6 +81,9 @@ $(document).ready(function() {
 Here is the result of our effort. 
 
 ![result](https://rammstein4o.github.io/jquery.uploader/images/result.png)
+
+## Support
+If you run into an issue and need to report a bug or you just have a question, please create an [Issue](https://github.com/rammstein4o/jquery.uploader/issues) on GitHub issues and we will investigate it.
 
 ## License
 Distributed under [MIT license](https://opensource.org/licenses/MIT)
