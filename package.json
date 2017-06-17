@@ -2,6 +2,7 @@
     "name": "jquery.uploader",
     "version": "0.1.0",
     "description": "Simple HTML5 file uploader, a plugin tool for jQuery which change completely file input and make it with multiple file selection, drag&drop support, different validations, thumbnails, etc",
+    "author": "Radoslav Salov",
     "license": "MIT",
     "keywords": [
         "jquery",
@@ -11,7 +12,9 @@
         "upload",
         "bootstrap"
     ],
-    "main": "src/js/jquery.uploader.js",
+    "main": "dist/js/jquery.uploader.js",
+    "readme": "docs/index.md",
+    "homepage": "https://rammstein4o.github.io/jquery.uploader/",
     "github": "https://github.com/rammstein4o/jquery.uploader",
     "bugs": {
         "url": "https://github.com/rammstein4o/jquery.uploader/issues"
