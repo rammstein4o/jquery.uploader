@@ -1,7 +1,1 @@
 theme: jekyll-theme-hacker
-nav:
-- page: Header One
-  permalink: #header-one
-
-- page: Header Two
-  permalink: #header-two

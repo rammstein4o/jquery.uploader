@@ -82,6 +82,11 @@ Here is the result of our effort.
 
 ![result](https://rammstein4o.github.io/jquery.uploader/images/result.png)
 
+## More information
+* [Available Options](https://rammstein4o.github.io/jquery.uploader/options)
+* [API Methods](https://rammstein4o.github.io/jquery.uploader/api)
+* [Examples](https://rammstein4o.github.io/jquery.uploader/examples/)
+
 ## Support
 If you run into an issue and need to report a bug or you just have a question, please create an [Issue](https://github.com/rammstein4o/jquery.uploader/issues) on GitHub issues and we will investigate it.
 
