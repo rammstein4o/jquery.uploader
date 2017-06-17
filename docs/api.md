@@ -37,10 +37,10 @@ Append a file to the input.
 parameter:
 ```javascript
 {
-    "name": "appended_file.jpg",
-    "size": 5453,
-    "type": "image/jpg",
-    "file": "/path/to/file.jpg"
+    'name': 'appended_file.jpg',
+    'size': 5453,
+    'type': 'image/jpg',
+    'file': '/path/to/file.jpg'
 }
 ```
 
