@@ -23,7 +23,7 @@ Specify the jquery.uploader theme. It will just set to main div as class the the
 
 #### templates
 Specify the file preview templates, selectors and some options.
-```javascript
+```
 {
     'box': null, //Thumbnail's box element {null, String}
     'item': null, //File item element {String(use uploader variables), Function}
@@ -42,7 +42,7 @@ Specify the file preview templates, selectors and some options.
 
 #### uploadFile
 Enable Instantly file uploading feature. In the object you can specify the normal jQuery $.ajax options, or callbacks.
-```javascript
+```
 {
     'url': null, //URL to which the request is sent {String}
     'data': null, //Data to be sent to the server {Object}
@@ -59,7 +59,7 @@ Enable Instantly file uploading feature. In the object you can specify the norma
 
 #### dragDrop
 Enable Drag&Drop feature. In this object you can specify only the callbacks. Note that this feature wors only by instantly uploading.
-```javascript
+```
 {
     'dragEnter': null, //A function that is fired when a dragged element enters the input. {Function}
     'dragLeave': null, //A function that is fired when a dragged element leaves the input. {Function}
@@ -78,7 +78,7 @@ By removing a file the script is creating an hidden input with it's name. Use th
 
 #### files
 The list with the already uploaded files. Use this option in Edit Mode.
-```javascript
+```
 [
     {
         'name': 'appended_file.jpg',
@@ -124,7 +124,7 @@ Define your own option values in this Object that you can use later everywhere, 
 
 #### captions
 Specify your own captions. Here you can also use uploader variables.
-```javascript
+```
 {
     'button': 'Choose Files',
     'feedback': 'Choose files To Upload',
@@ -135,7 +135,7 @@ Specify your own captions. Here you can also use uploader variables.
         'filesLimit': 'Only {{fi-limit}} files are allowed to be uploaded.',
         'filesType': 'Only Images are allowed to be uploaded.',
         'filesSize': '{{fi-name}} is too large! Please upload file up to {{fi-maxSize}} MB.',
-        'filesSizeAll': 'Files you've choosed are too large! Please upload files up to {{fi-maxSize}} MB.'
+        'filesSizeAll': 'Files you\'ve choosed are too large! Please upload files up to {{fi-maxSize}} MB.'
     }
 }
 ```

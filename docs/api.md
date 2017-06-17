@@ -35,7 +35,7 @@ jquery.uploader last choosed or last uploaded File object.
 Append a file to the input.
 
 parameter:
-```javascript
+```
 {
     'name': 'appended_file.jpg',
     'size': 5453,
