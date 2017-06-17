@@ -13,7 +13,7 @@
     "bootstrap"
   ],
   "main": "dist/js/jquery.uploader.js",
-  "readme": "docs/index.md",
+  "readmeFilename": "docs/index.md",
   "homepage": "https://rammstein4o.github.io/jquery.uploader/",
   "github": "https://github.com/rammstein4o/jquery.uploader",
   "bugs": {

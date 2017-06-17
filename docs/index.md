@@ -27,6 +27,61 @@ This section gives a short description about the most considerable script featur
 * **IE 10+**
 *   and others that supports **HTML5**
 
+## Instructions:
+
+Install the package with [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally)
+
+```bash
+npm install jquery.uploader
+```
+
+Include jquery.uploader script and stylesheets in your document (you will need to make sure the css and js files are on your server, and adjust the paths in the script and link tag). 
+Make sure you also load the jQuery library. Example:
+
+**Stylesheets:**
+
+Include the jQuery.filer stylesheets into head.
+
+```html
+<link href="./css/jquery.uploader.css" type="text/css" rel="stylesheet" />
+```
+
+**Scripts:**
+
+Include the jQuery library and jquery.uploader script file in your html page.
+
+```html
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="./js/jquery.filer.min.js"></script>
+```
+
+**HTML:**
+
+Create a simple form with an input file element.
+
+```html
+<form action="./php/upload.php" method="post" enctype="multipart/form-data">
+      <input type="file" name="files[]" id="filer_input" multiple="multiple">
+      <input type="submit" value="Submit">
+</form>
+```
+
+**Javascript:**
+
+The plugin is named "uploader" and can be applied to any element. If you are not familiar with jQuery, please, read this [tutorial for beginners](http://learn.jquery.com/about-jquery/how-jquery-works/).
+
+```bash
+$(document).ready(function() {
+     $('#filer_input').uploader();       
+});
+```
+
+**Result:**
+
+Here is the result of our effort. 
+
+![result](https://rammstein4o.github.io/jquery.uploader/images/result.png)
+
 ## License
 Distributed under [MIT license](https://opensource.org/licenses/MIT)
 
