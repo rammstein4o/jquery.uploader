@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Getting started - jquery.uploader by rammstein4o</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link href="https://rawgit.com/rammstein4o/jquery.uploader/0.2.0/docs/assets/styles.css" rel="stylesheet">
+</head> 
+<body>
+    <div class="navbar navbar-inverse navbar-twitch" role="navigation">
+        <div class="container">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Home"> 
+                                <span class="fa fa-home"></span> 
+                            </span>
+                            <span class="full-nav">Home</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="/getting-started.html">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Getting started"> 
+                                <span class="fa fa-code"></span> 
+                            </span>
+                            <span class="full-nav"> Getting started </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/documentation.html">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Documentation"> 
+                                <span class="fa fa-list-alt"></span> 
+                            </span>
+                            <span class="full-nav"> Documentation </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/examples.html">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Examples"> 
+                                <span class="fa fa-cog"></span> 
+                            </span>
+                            <span class="full-nav"> Examples </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/rammstein4o/jquery.uploader/issues">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Contact Us"> 
+                                <span class="fa fa-life-ring"></span> 
+                            </span>
+                            <span class="full-nav"> Support </span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+    <button type="button" class="btn btn-default btn-xs navbar-twitch-toggle">
+        <span class="fa fa-chevron-right nav-open"></span>
+        <span class="fa fa-chevron-left nav-close"></span>
+    </button>
+    <div class="page-wrapper">
+        <header class="header text-center">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <span class="text-bold">jquery.uploader</span>
+                        <small>v0.2.0</small>
+                    </h1>
+                </div>
+                <div class="tagline">
+                    <p>Simple HTML5 file uploader created as a plugin for jQuery.</p>
+                </div>
+                <div class="header-buttons">
+                    <a href="https://github.com/rammstein4o/jquery.uploader" target="_blank" class="btn btn-warning btn-lg"><i class="fa fa-github"></i> View on GitHub</a>
+                    <a href="https://github.com/rammstein4o/jquery.uploader/archive/0.2.0.zip" target="_blank" class="btn btn-warning btn-lg"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </header>
+        <section class="section">
+            <div class="container">
+                <br>
+                <br>
+                <br>
+                <h2 class="title">Getting started:</h2>
+                <p>Install the package with <a href="https://docs.npmjs.com/getting-started/installing-npm-packages-locally" target="_blank">npm</a></p>
+                <pre><code class="bash">npm install jquery.uploader</code></pre>
+                <p>Include jquery.uploader script and stylesheets in your document (you will need to make sure the css and js files are on your server, and adjust the paths in the script and link tag). Make sure you also load the jQuery library. Example:</p>
+                <p><strong>Stylesheets:</strong></p>
+                <p>Include the jquery.uploader stylesheets into head.</p>
+                <pre><code class="xml">&lt;link href="./css/jquery.uploader.css" type="text/css" rel="stylesheet"&gt;</code></pre>
+                <p><strong>Scripts:</strong></p>
+                <p>Include the jQuery library and jquery.uploader script file in your html page.</p>
+                <pre><code class="xml">&lt;script src=&quot;http://code.jquery.com/jquery-latest.min.js&quot;&gt;&lt;/script&gt;<br>&lt;script src=&quot;./js/jquery.uploader.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                <p><strong>HTML:</strong></p>
+                <p>Create a simple form with an input file element.</p>
+                <pre><code class="xml">&lt;form action=&quot;./php/upload.php&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;<br>      &lt;input type=&quot;file&quot; name=&quot;files[]&quot; multiple=&quot;multiple&quot;&gt;<br>      &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>&lt;/form&gt;</code></pre>
+                <p><strong>Javascript:</strong></p>
+                <p>The plugin is named "uploader" and can be applied to any element. If you are not familiar with jQuery, please, read this <a href="http://learn.jquery.com/about-jquery/how-jquery-works/" target="_blank">tutorial for beginners</a>.</p>
+                <pre><code class="javascript">$(document).ready(function() {<br>     $(&apos;:input[type=&quot;file&quot;]&apos;).uploader();       <br>});</code></pre>
+                <p><strong>Result:</strong></p>
+                <p>Here is the result of our effort.</p>
+                <p><img src="https://rawgit.com/rammstein4o/jquery.uploader/0.2.0/docs/assets/result.png" alt="result"></p>
+            </div>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" crossorigin="anonymous"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>                                                                  
+    <script type="text/javascript" src="https://rawgit.com/rammstein4o/jquery.uploader/0.2.0/docs/assets/jquery.matchHeight-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.navbar-nav [data-toggle="tooltip"]').tooltip();
+            $('.navbar-twitch-toggle').on('click', function(event) {
+                event.preventDefault();
+                $('.navbar-twitch').toggleClass('open');
+            });
+            
+            $('pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</body>
+</html> 
+

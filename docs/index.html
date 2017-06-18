@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Home - jquery.uploader by rammstein4o</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://rawgit.com/rammstein4o/jquery.uploader/0.2.0/docs/assets/styles.css" rel="stylesheet">
+</head> 
+<body>
+    <div class="navbar navbar-inverse navbar-twitch" role="navigation">
+        <div class="container">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="/">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Home"> 
+                                <span class="fa fa-home"></span> 
+                            </span>
+                            <span class="full-nav">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/getting-started.html">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Getting started"> 
+                                <span class="fa fa-code"></span> 
+                            </span>
+                            <span class="full-nav"> Getting started </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/documentation.html">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Documentation"> 
+                                <span class="fa fa-list-alt"></span> 
+                            </span>
+                            <span class="full-nav"> Documentation </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/examples.html">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Examples"> 
+                                <span class="fa fa-cog"></span> 
+                            </span>
+                            <span class="full-nav"> Examples </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/rammstein4o/jquery.uploader/issues">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Contact Us"> 
+                                <span class="fa fa-life-ring"></span> 
+                            </span>
+                            <span class="full-nav"> Support </span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+    <button type="button" class="btn btn-default btn-xs navbar-twitch-toggle">
+        <span class="fa fa-chevron-right nav-open"></span>
+        <span class="fa fa-chevron-left nav-close"></span>
+    </button>
+    <div class="page-wrapper">
+        <header class="header text-center">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <span class="text-bold">jquery.uploader</span>
+                        <small>v0.2.0</small>
+                    </h1>
+                </div>
+                <div class="tagline">
+                    <p>Simple HTML5 file uploader created as a plugin for jQuery.</p>
+                </div>
+                <div class="header-buttons">
+                    <a href="https://github.com/rammstein4o/jquery.uploader" target="_blank" class="btn btn-warning btn-lg"><i class="fa fa-github"></i> View on GitHub</a>
+                    <a href="https://github.com/rammstein4o/jquery.uploader/archive/0.2.0.zip" target="_blank" class="btn btn-warning btn-lg"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </header>
+        <section class="section">
+            <div class="container">
+                <br>
+                <br>
+                <br>
+                <h2 class="title">Features</h2>
+                <div class="cards-wrapper row text-center">
+                    <div class="item item-purple col-md-4 col-sm-6 col-xs-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-check"></i>
+                            </div>
+                            <h3 class="title">Change file input</h3>
+                            <p class="intro">Design your own file input with HTML&CSS or just use our default template</p>
+                        </div>
+                    </div>
+                    <div class="item item-purple col-md-4 col-sm-6 col-xs-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-hand-rock-o"></i>
+                            </div>
+                            <h3 class="title">Drag & Drop</h3>
+                            <p class="intro">Drag and drop files straight from your desktop and upload directly them</p>
+                        </div>
+                    </div>
+                    <div class="item item-purple col-md-4 col-sm-6 col-xs-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-upload"></i>
+                            </div>
+                            <h3 class="title">Instant uploading</h3>
+                            <p class="intro">Upload the file directly to server after choosing or dragging it</p>
+                        </div>
+                    </div>
+                    <div class="item item-purple col-md-4 col-sm-6 col-xs-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-plus"></i>
+                            </div>
+                            <h3 class="title">Add more</h3>
+                            <p class="intro">Choose multiple files from different folders without instantly uploading them</p>
+                        </div>
+                    </div>
+                    <div class="item item-purple col-md-4 col-sm-6 col-xs-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-exclamation"></i>
+                            </div>
+                            <h3 class="title">Validators</h3>
+                            <p class="intro">Limit your users to a specific file type, size, number of files or write your own custom validator</p>
+                        </div>
+                    </div>
+                    <div class="item item-purple col-md-4 col-sm-6 col-xs-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-picture-o"></i>
+                            </div>
+                            <h3 class="title">Previews</h3>
+                            <p class="intro">Give your users an in-browser thumb preview of images or file extension before they upload</p>
+                        </div>
+                    </div>
+                    <div class="item item-purple col-md-4 col-sm-6 col-xs-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-pencil"></i>
+                            </div>
+                            <h3 class="title">Edit mode</h3>
+                            <p class="intro">Keep the uploaded files to input for previewing or editing them</p>
+                        </div>
+                    </div>
+                    <div class="item item-purple col-md-4 col-sm-6 col-xs-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-cogs"></i>
+                            </div>
+                            <h3 class="title">API</h3>
+                            <p class="intro">Now you can use values or functions to get the information or to manipulate with the file</p>
+                        </div>
+                    </div>
+                    <div class="item item-purple col-md-4 col-sm-6 col-xs-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-code"></i>
+                            </div>
+                            <h3 class="title">Customizig</h3>
+                            <p class="intro">Customize your input, templates, captions, callbacks and many others</p>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="title">Browser Support</h2>
+                <div class="cards-wrapper row text-center">
+                    <div class="item item-primary col-md-4 col-sm-6 col-xs-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-chrome"></i>
+                            </div>
+                            <h3 class="title">Chrome</h3>
+                            <p class="intro">version 13+</p>
+                        </div>
+                    </div>
+                    <div class="item item-primary col-md-4 col-sm-6 col-xs-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-firefox"></i>
+                            </div>
+                            <h3 class="title">Firefox</h3>
+                            <p class="intro">version 3.6+</p>
+                        </div>
+                    </div>
+                    <div class="item item-primary col-md-4 col-sm-6 col-xs-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-safari"></i>
+                            </div>
+                            <h3 class="title">Safari</h3>
+                            <p class="intro">version 6+</p>
+                        </div>
+                    </div>
+                    <div class="item item-primary col-md-4 col-sm-6 col-xs-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-opera"></i>
+                            </div>
+                            <h3 class="title">Opera</h3>
+                            <p class="intro">version 11.1+</p>
+                        </div>
+                    </div>
+                    <div class="item item-primary col-md-4 col-sm-6 col-xs-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-internet-explorer"></i>
+                            </div>
+                            <h3 class="title">IE</h3>
+                            <p class="intro">version 10+</p>
+                        </div>
+                    </div>
+                    <div class="item item-primary col-md-4 col-sm-6 col-xs-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-asterisk"></i>
+                            </div>
+                            <h3 class="title">Others</h3>
+                            <p class="intro">that supports HTML5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h2 class="title" id="license">License</h2>
+                <p>Distributed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a></p>
+                <p>Portions of the project are licensed under <a href="https://opensource.org/licenses/Apache-2.0" target="_blank">Apache v2.0</a></p>
+                <h2 class="title" id="copyright">Copyright</h2>
+                <p>Copyright (c) 2017 Radoslav Salov</p>
+                <p>Copyright for portions of the project are held by: CreativeDream (c) 2016</p>
+            </div>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" crossorigin="anonymous"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>                                                                  
+    <script type="text/javascript" src="https://rawgit.com/rammstein4o/jquery.uploader/0.2.0/docs/assets/jquery.matchHeight-min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.item-inner').matchHeight();
+            
+            $('.navbar-nav [data-toggle="tooltip"]').tooltip();
+            $('.navbar-twitch-toggle').on('click', function(event) {
+                event.preventDefault();
+                $('.navbar-twitch').toggleClass('open');
+            });
+        });
+    </script>
+</body>
+</html> 
+

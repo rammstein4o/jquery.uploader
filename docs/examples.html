@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Examples - jquery.uploader by rammstein4o</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://rawgit.com/rammstein4o/jquery.uploader/0.2.0/docs/assets/styles.css" rel="stylesheet">
+</head> 
+<body>
+    <div class="navbar navbar-inverse navbar-twitch" role="navigation">
+        <div class="container">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Home"> 
+                                <span class="fa fa-home"></span> 
+                            </span>
+                            <span class="full-nav">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/getting-started.html">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Getting started"> 
+                                <span class="fa fa-code"></span> 
+                            </span>
+                            <span class="full-nav"> Getting started </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/documentation.html">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Documentation"> 
+                                <span class="fa fa-list-alt"></span> 
+                            </span>
+                            <span class="full-nav"> Documentation </span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="/examples.html">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Examples"> 
+                                <span class="fa fa-cog"></span> 
+                            </span>
+                            <span class="full-nav"> Examples </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/rammstein4o/jquery.uploader/issues">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Contact Us"> 
+                                <span class="fa fa-life-ring"></span> 
+                            </span>
+                            <span class="full-nav"> Support </span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+    <button type="button" class="btn btn-default btn-xs navbar-twitch-toggle">
+        <span class="fa fa-chevron-right nav-open"></span>
+        <span class="fa fa-chevron-left nav-close"></span>
+    </button>
+    <div class="page-wrapper">
+        <header class="header text-center">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <span class="text-bold">jquery.uploader</span>
+                        <small>v0.2.0</small>
+                    </h1>
+                </div>
+                <div class="tagline">
+                    <p>Simple HTML5 file uploader created as a plugin for jQuery.</p>
+                </div>
+                <div class="header-buttons">
+                    <a href="https://github.com/rammstein4o/jquery.uploader" target="_blank" class="btn btn-warning btn-lg"><i class="fa fa-github"></i> View on GitHub</a>
+                    <a href="https://github.com/rammstein4o/jquery.uploader/archive/0.2.0.zip" target="_blank" class="btn btn-warning btn-lg"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </header>
+        <section class="section">
+            <div class="container">
+                <br>
+                <br>
+                <br>
+                <h2 class="title">Examples:</h2>
+            </div>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" crossorigin="anonymous"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>                                                                  
+    <script type="text/javascript" src="https://rawgit.com/rammstein4o/jquery.uploader/0.2.0/docs/assets/jquery.matchHeight-min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.navbar-nav [data-toggle="tooltip"]').tooltip();
+            $('.navbar-twitch-toggle').on('click', function(event) {
+                event.preventDefault();
+                $('.navbar-twitch').toggleClass('open');
+            });
+        });
+    </script>
+</body>
+</html> 
+

@@ -1,6 +1,6 @@
 {
   "name": "jquery.uploader",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Simple HTML5 file uploader, a plugin tool for jQuery which change completely file input and make it with multiple file selection, drag&drop support, different validations, thumbnails, etc",
   "author": "Radoslav Salov",
   "license": "MIT",
@@ -13,7 +13,6 @@
     "bootstrap"
   ],
   "main": "dist/js/jquery.uploader.js",
-  "readmeFilename": "docs/index.md",
   "homepage": "https://rammstein4o.github.io/jquery.uploader/",
   "github": "https://github.com/rammstein4o/jquery.uploader",
   "bugs": {
@@ -24,6 +23,7 @@
     "url": "https://github.com/rammstein4o/jquery.uploader.git"
   },
   "devDependencies": {
+    "qunitjs": "*",
     "grunt": "*",
     "grunt-concurrent": "*",
     "grunt-contrib-clean": "*",
@@ -31,9 +31,10 @@
     "grunt-contrib-connect": "*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-jshint": "*",
+    "grunt-contrib-sass": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
-    "grunt-contrib-sass": "*",
+    "grunt-contrib-qunit": "*",
     "jshint-stylish": "*",
     "load-grunt-tasks": "*",
     "time-grunt": "*"

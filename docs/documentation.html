@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Documentation - jquery.uploader by rammstein4o</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link href="https://rawgit.com/rammstein4o/jquery.uploader/0.2.0/docs/assets/styles.css" rel="stylesheet">
+</head> 
+<body>
+    <div class="navbar navbar-inverse navbar-twitch" role="navigation">
+        <div class="container">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Home"> 
+                                <span class="fa fa-home"></span> 
+                            </span>
+                            <span class="full-nav">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/getting-started.html">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Getting started"> 
+                                <span class="fa fa-code"></span> 
+                            </span>
+                            <span class="full-nav"> Getting started </span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="/documentation.html">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Documentation"> 
+                                <span class="fa fa-list-alt"></span> 
+                            </span>
+                            <span class="full-nav"> Documentation </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/examples.html">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Examples"> 
+                                <span class="fa fa-cog"></span> 
+                            </span>
+                            <span class="full-nav"> Examples </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/rammstein4o/jquery.uploader/issues">
+                            <span class="small-nav" data-toggle="tooltip" data-placement="right" title="Contact Us"> 
+                                <span class="fa fa-life-ring"></span> 
+                            </span>
+                            <span class="full-nav"> Support </span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+    <button type="button" class="btn btn-default btn-xs navbar-twitch-toggle">
+        <span class="fa fa-chevron-right nav-open"></span>
+        <span class="fa fa-chevron-left nav-close"></span>
+    </button>
+    <div class="page-wrapper">
+        <header class="header text-center">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <span class="text-bold">jquery.uploader</span>
+                        <small>v0.2.0</small>
+                    </h1>
+                </div>
+                <div class="tagline">
+                    <p>Simple HTML5 file uploader created as a plugin for jQuery.</p>
+                </div>
+                <div class="header-buttons">
+                    <a href="https://github.com/rammstein4o/jquery.uploader" target="_blank" class="btn btn-warning btn-lg"><i class="fa fa-github"></i> View on GitHub</a>
+                    <a href="https://github.com/rammstein4o/jquery.uploader/archive/0.2.0.zip" target="_blank" class="btn btn-warning btn-lg"><i class="fa fa-download"></i> Download</a>
+                </div>
+            </div>
+        </header>
+        <section class="section">
+            <div class="container">
+                <br>
+                <br>
+                <br>
+                <h2 class="title">Documentation:</h2>
+                <div>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#options" aria-controls="options" role="tab" data-toggle="tab">Options</a></li>
+                        <li role="presentation"><a href="#api" aria-controls="api" role="tab" data-toggle="tab">API Methods</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="options">
+                            <br>
+                            <br>
+                            <p>You can apply jquery.uploader plugin to the input file and change its settings. Example:</p>
+                            <pre><code class="javascript">$(&apos;:input[type=&quot;file&quot;]&apos;).uploader({<br>    &apos;showThumbs&apos;: true,<br>    &apos;addMore&apos;: true,<br>    &apos;allowDuplicates&apos;: false<br>});</code></pre>
+                            <br>
+                            <table class="table documentation">
+                                <colgroup>
+                                    <col class="col-md-3 col-xs-5">
+                                    <col class="col-md-9 col-xs-7">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><b>limit</b></td>
+                                        <td>
+                                            <p>Maximal number of files.</p>
+                                            <small class="text-muted">Number; Default value: null</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>maxSize</b></td>
+                                        <td>
+                                            <p>Maximal file size in MB's.</p>
+                                            <small class="text-muted">Number; Default value: null</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>extensions</b></td>
+                                        <td>
+                                            <p>File extension's whitelist.</p>
+                                            <small class="text-muted">Array; Default value: null</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>changeInput</b></td>
+                                        <td>
+                                            <p>Create a new file input element. You can use the default template or to write your own as string or jquery element.</p>
+                                            <small class="text-muted">Boolean, String, Object; Default value: true</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>showThumbs</b></td>
+                                        <td>
+                                            <p>Show the in-browser files previews.</p>
+                                            <small class="text-muted">Boolean; Default value: false</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>appendTo</b></td>
+                                        <td>
+                                            <p>The target thumbnails target element selector. Use this option when you want to append your files previews into specific element.</p>
+                                            <small class="text-muted">String; Default value: null</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>theme</b></td>
+                                        <td>
+                                            <p>Specify the jquery.uploader theme. It will just set to main filer div as class the theme name.</p>
+                                            <small class="text-muted">String; Default value: 'default'</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>templates</b></td>
+                                        <td>
+                                            <p>Specify the templates, selectors and some options.</p>
+                                            <small class="text-muted">Object</small>
+                                            <br>
+                                            <br>
+                                            <pre><code class="javascript">{<br>    &apos;box&apos;: &apos;...&apos;,<br>    &apos;item&apos;: &apos;...&apos;,<br>    &apos;itemAppend&apos;: &apos;...&apos;,<br>    &apos;progressBar&apos;: &apos;...&apos;,<br>    &apos;itemAppendToEnd&apos;: false,<br>    &apos;removeConfirmation&apos;: true,<br>    &apos;canvasImage&apos;: true,<br>    &apos;selectors&apos;: {<br>        &apos;list&apos;: &apos;.uploader-items-list&apos;,<br>        &apos;item&apos;: &apos;.uploader-item&apos;,<br>        &apos;progressBar&apos;: &apos;.bar&apos;,<br>        &apos;remove&apos;: &apos;.uploader-item-trash-action&apos;<br>    }<br>}</code></pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>uploadFile</b></td>
+                                        <td>
+                                            <p>Enable instant file uploading feature.</p>
+                                            <small class="text-muted">Object; Default value: null</small>
+                                            <br>
+                                            <br>
+                                            <pre><code class="javascript">{
+    &apos;url&apos;: null, // URL to which the request is sent
+    &apos;data&apos;: null, // Data to be sent to the server
+    &apos;type&apos;: &apos;POST&apos;, // The type of request
+    &apos;headers&apos;: {}, // Request headers
+    &apos;enctype&apos;: &apos;multipart/form-data&apos;, // Request enctype
+    &apos;beforeSend&apos;: null, // A pre-request callback function
+    &apos;success&apos;: null, // Fired if the request succeeds
+    &apos;error&apos;: null, // Fired if the request fails
+    &apos;statusCode&apos;: null, // An object of numeric HTTP codes
+    &apos;onProgress&apos;: null, // Fired while uploading file
+    &apos;onComplete&apos;: null // Fired when all files were uploaded
+}</code></pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>dragDrop</b></td>
+                                        <td>
+                                            <p>Enable Drag&Drop feature. In this object you can specify only the callbacks. Note that this feature wors only with instant upload.</p>
+                                            <small class="text-muted">Object; Default value: null</small>
+                                            <br>
+                                            <br>
+                                            <pre><code class="javascript">{
+    &apos;dragEnter&apos;: null, // Fired when a dragged element enters the input.
+    &apos;dragLeave&apos;: null, // Fired when a dragged element leaves the input.
+    &apos;drop&apos;: null, // Fired when a dragged element is dropped on a valid drop target.
+}</code></pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>addMore</b></td>
+                                        <td>
+                                            <p>Multiple file selection without instantly uploading them. You need to enable this feature in edit mode when you need to upload more than 1 file.</p>
+                                            <small class="text-muted">Boolean; Default value: false</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>excludeName</b></td>
+                                        <td>
+                                            <p>By removing a file the script is creating an hidden input with it's name. Use this option if you want to specify the input's name.</p>
+                                            <small class="text-muted">String; Default value: null</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>files</b></td>
+                                        <td>
+                                            <p>The list with the already uploaded files. Use this option in edit mode.</p>
+                                            <small class="text-muted">Array; Default value: null</small>
+                                            <br>
+                                            <br>
+                                            <pre><code class="javascript">[
+    {
+        &apos;name&apos;: &apos;appended_file.jpg&apos;,
+        &apos;size&apos;: 5453,
+        &apos;type&apos;: &apos;image/jpg&apos;,
+        &apos;file&apos;: &apos;/path/to/file.jpg&apos;
+    },
+    {
+        &apos;name&apos;: &apos;appended_file_2.jpg&apos;,
+        &apos;size&apos;: 9453,
+        &apos;type&apos;: &apos;image/jpg&apos;,
+        &apos;file&apos;: &apos;path/to/file2.jpg&apos;
+    }
+]</code></pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>beforeRender</b></td>
+                                        <td>
+                                            <p>A function that is fired before rendering the new file input.</p>
+                                            <small class="text-muted">Function; Default value: null</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>afterRender</b></td>
+                                        <td>
+                                            <p>A function that is fired after rendering the new file input.</p>
+                                            <small class="text-muted">Function; Default value: null</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>beforeShow</b></td>
+                                        <td>
+                                            <p>A function that is fired before showing thumbnail's box. Should return boolean value.</p>
+                                            <small class="text-muted">Function; Default value: null</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>afterShow</b></td>
+                                        <td>
+                                            <p>A function that is fired after appending all thumbnails items.</p>
+                                            <small class="text-muted">Function; Default value: null</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>beforeSelect</b></td>
+                                        <td>
+                                            <p>A function that is fired after selecting a file and before adding it to the memory. Should return boolean value.</p>
+                                            <small class="text-muted">Function; Default value: null</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>onSelect</b></td>
+                                        <td>
+                                            <p>A function that is fired after selecting a file.</p>
+                                            <small class="text-muted">Function; Default value: null</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>onRemove</b></td>
+                                        <td>
+                                            <p>A function that is fired after deleting a file.</p>
+                                            <small class="text-muted">Function; Default value: null</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>onEmpty</b></td>
+                                        <td>
+                                            <p>A function that is fired when no files are selected.</p>
+                                            <small class="text-muted">Function; Default value: null</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>options</b></td>
+                                        <td>
+                                            <p>Specify your own options that you can also use as uploader variables.</p>
+                                            <small class="text-muted">Object; Default value: null</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>captions</b></td>
+                                        <td>
+                                            <p>Specify your own captions. Here you can also use uploader variables.</p>
+                                            <small class="text-muted">Object</small>
+                                            <br>
+                                            <br>
+                                            <pre><code class="javascript">{
+    &apos;button&apos;: &apos;Choose Files&apos;,
+    &apos;feedback&apos;: &apos;Choose files To Upload&apos;,
+    &apos;feedback2&apos;: &apos;files were chosen&apos;,
+    &apos;drop&apos;: &apos;Drop file here to Upload&apos;,
+    &apos;removeConfirmation&apos;: &apos;Are you sure you want to remove this file?&apos;,
+    &apos;errors&apos;: {
+        &apos;filesLimit&apos;: &apos;Only {{fi-limit}} files are allowed to be uploaded.&apos;,
+        &apos;filesType&apos;: &apos;Only Images are allowed to be uploaded.&apos;,
+        &apos;filesSize&apos;: &apos;{{fi-name}} is too large! Please upload file up to {{fi-maxSize}} MB.&apos;,
+        &apos;filesSizeAll&apos;: &quot;Files you&apos;ve choosed are too large! Please upload files up to {{fi-maxSize}} MB.&quot;
+    }
+}</code></pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>icons</b></td>
+                                        <td>
+                                            <p>Specify icons to be used</p>
+                                            <small class="text-muted">Object</small>
+                                            <br>
+                                            <br>
+                                            <pre><code class="javascript">{
+    &apos;default&apos;: &quot;fa&quot;,
+    &apos;trash&apos;: &quot;fa-trash-o&quot;,
+    &apos;file&apos;: &quot;fa-file-o&quot;,
+    &apos;image&apos;: &quot;fa-file-image-o&quot;,
+    &apos;video&apos;: &quot;fa-file-video-o&quot;,
+    &apos;audio&apos;: &quot;fa-file-audio-o&quot;,
+    &apos;code&apos;: &quot;fa-file-code-o&quot;,
+    &apos;xls&apos;: &quot;fa-file-excel-o&quot;,
+    &apos;pdf&apos;: &quot;fa-file-pdf-o&quot;,
+    &apos;ppt&apos;: &quot;fa-file-powerpoint-o&quot;,
+    &apos;text&apos;: &quot;fa-file-text-o&quot;,
+    &apos;odt&apos;: &quot;fa-file-text-o&quot;,
+    &apos;doc&apos;: &quot;fa-file-word-o&quot;,
+    &apos;docx&apos;: &quot;fa-file-word-o&quot;,
+    &apos;zip&apos;: &quot;fa-file-zip-o&quot;
+}</code></pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <br>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="api">
+                            <br>
+                            <br>
+                            <p>The plugin comes with a number of public values and functions to help you utilize the plugin in a number of different scenarios. To use it you will need to get the input property. Example:</p>
+                            <pre><code class="javascript">var uploader = $(&apos;:input[type=&quot;file&quot;]&apos;).prop(&apos;uploader&apos;);<br>uploader.reset();</code></pre>
+                            <br>
+                            <table class="table documentation">
+                                <colgroup>
+                                    <col class="col-md-3 col-xs-5">
+                                    <col class="col-md-9 col-xs-7">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><b>options</b></td>
+                                        <td>
+                                            <p>jquery.uploader options</p>
+                                            <small class="text-muted">Object</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>boxEl</b></td>
+                                        <td>
+                                            <p>Thumbnail's box element.</p>
+                                            <small class="text-muted">DOM Object</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>listEl</b></td>
+                                        <td>
+                                            <p>Thumbnail's list element.</p>
+                                            <small class="text-muted">DOM Object</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>newInputEl</b></td>
+                                        <td>
+                                            <p>New file input element.</p>
+                                            <small class="text-muted">DOM Object</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>inputEl</b></td>
+                                        <td>
+                                            <p>File input element.</p>
+                                            <small class="text-muted">DOM Object</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>files</b></td>
+                                        <td>
+                                            <p>Javascript FileList files.</p>
+                                            <small class="text-muted">FileList</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>files_list</b></td>
+                                        <td>
+                                            <p>jquery.uploader files list</p>
+                                            <small class="text-muted">Object</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>current_file</b></td>
+                                        <td>
+                                            <p>Last choosed file.</p>
+                                            <small class="text-muted">Object</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>append(file)</b></td>
+                                        <td>
+                                            <p>Append file function. Send an object with file information as paramenter.</p>
+                                            <small class="text-muted">Function</small>
+                                            <br>
+                                            <br>
+                                            <pre><code class="javascript">{<br>    &apos;name&apos;: &apos;appended_file.jpg&apos;,<br>    &apos;size&apos;: 5453,<br>    &apos;type&apos;: &apos;image/jpg&apos;,<br>    &apos;file&apos;: &apos;/path/to/file.jpg&apos;<br>}</code></pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>retry(index)</b></td>
+                                        <td>
+                                            <p>Retry upload-failed file function. Send file index as paramenter.</p>
+                                            <small class="text-muted">Function</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>remove(index)</b></td>
+                                        <td>
+                                            <p>Remove file function. Send file index as paramenter.</p>
+                                            <small class="text-muted">Function</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>reset()</b></td>
+                                        <td>
+                                            <p>Reset function.</p>
+                                            <small class="text-muted">Function</small>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" crossorigin="anonymous"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>                                                                  
+    <script type="text/javascript" src="https://rawgit.com/rammstein4o/jquery.uploader/0.2.0/docs/assets/jquery.matchHeight-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.navbar-nav [data-toggle="tooltip"]').tooltip();
+            $('.navbar-twitch-toggle').on('click', function(event) {
+                event.preventDefault();
+                $('.navbar-twitch').toggleClass('open');
+            });
+            
+            $('pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</body>
+</html> 
+

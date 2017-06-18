@@ -14,7 +14,7 @@ module.exports = function (grunt) {
         src: 'src',
         dist: 'dist',
         banner: '/*!\n * jquery.uploader\n\n * Simple HTML5 file uploader\n * Copyright (c) 2017' + (fullYear != 2017 ? '-' + fullYear : '') + ' Radoslav Salov\n * Distributed under MIT license\n * Portions of the project are licensed under Apache 2.0\n * Copyright for portions of the project are held by:\n * CreativeDream (c) 2016 ( https://github.com/CreativeDream/jQuery.filer )\n */\n',
-        jshintFiles: ['Gruntfile.js', '<%= config.src %>/*.js'],
+        jshintFiles: ['Gruntfile.js', '<%= config.src %>/js/*.js'],
         uglifyFiles: {
             '<%= config.dist %>/js/jquery.uploader.min.js': [ '<%= config.src %>/js/jquery.uploader.js' ]
         }
@@ -41,6 +41,10 @@ module.exports = function (grunt) {
                 jshintrc: true
             },
             files: config.jshintFiles
+        },
+        
+        qunit: {
+            all: ['tests/**/*.html']
         },
         
         sass: {
@@ -70,10 +74,19 @@ module.exports = function (grunt) {
         
     });
     
-    grunt.registerTask('default', [
+    grunt.registerTask('test', [
         'jshint',
+        'qunit'
+    ]);
+    
+    grunt.registerTask('build', [
         'uglify:dist',
         'sass:dist'
+    ]);
+    
+    grunt.registerTask('default', [
+        'test',
+        'build'
     ]);
       
 };
